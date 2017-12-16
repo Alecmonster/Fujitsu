@@ -43,7 +43,7 @@ var errorHandler = {
 
 gulp.task('styles', function(){
   gulp.src('./src/sass/**/*.scss')
-    .pipe(wait(500)) //to fix Error: File to import not found or unreadable consider reducing delay
+    .pipe(wait(250)) //to fix Error: File to import not found or unreadable consider reducing delay
     .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['./src/sass']
@@ -55,24 +55,30 @@ gulp.task('styles', function(){
     .pipe(pixrem({ rootValue: '16px', html: false }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 });
 
 gulp.task('scripts', function(){
-  gulp.src('src/js/**/*.js')
+  gulp.src('src/js/main/*.js')
     .pipe(plumber(errorHandler))
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
     .pipe(gulp.dest('./'))
     .pipe(rename({suffix: '.min'}))
-    .pipe(uglify({
-      mangle: {
-        except: []
-      }
-    }))
+    .pipe(uglify())
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream())
+ gulp.src('src/js/form/*.js')
+    .pipe(plumber(errorHandler))
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+    .pipe(concat('form.js'))
+    .pipe(gulp.dest('./'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(uglify())
+    .pipe(gulp.dest('./'))
+    .pipe(browserSync.stream())    
 }); 
 
 gulp.task('default', ['browser-sync'], function(){

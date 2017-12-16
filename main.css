@@ -113,7 +113,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -410,14 +411,20 @@ template {
   font-family: 'FujitsuReg';
   src: url("src/fonts/fujitsusansregular-webfont.woff2") format("woff2"), url("src/fonts/fujitsusansregular-webfont.woff") format("woff"), url("src/fonts/fujitsusansregular-webfont") format("truetype"); }
 
+body {
+  font-family: 'FujitsuMed'; }
+
 html {
   box-sizing: border-box; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
 
-body {
-  font-family: 'FujitsuMed'; }
+iframe {
+  width: 100%;
+  border: none;
+  max-width: 640px;
+  height: 500px; }
 
 #wrapper {
   width: 100%;
@@ -476,7 +483,6 @@ nav {
   padding: 0 10px; }
 
 #hero {
-  background: -webkit-linear-gradient(left, #d0d5d6 0%, #f0f3f4 100%);
   background: linear-gradient(90deg, #d0d5d6 0%, #f0f3f4 100%);
   /* w3c */
   display: block;

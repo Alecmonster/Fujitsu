@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+@font-face {
+  font-family: 'FujitsuMed';
+  src: url("src/fonts/fujitsusansmedium-webfont.woff2") format("woff2"), url("src/fonts/fujitsusansmedium-webfont.woff") format("woff"), url("src/fonts/fujitsusansmedium-webfont") format("truetype"); }
+
+@font-face {
+  font-family: 'FujitsuReg';
+  src: url("src/fonts/fujitsusansregular-webfont.woff2") format("woff2"), url("src/fonts/fujitsusansregular-webfont.woff") format("woff"), url("src/fonts/fujitsusansregular-webfont") format("truetype"); }
+
+body {
+  font-family: 'FujitsuMed'; }
+
+body {
+  background-color: #dad9d6;
+  margin: 0;
+  padding: 15px; }
+  @media (min-width: 640px) {
+    body {
+      padding: 30px; } }
+
+input, textarea {
+  background-color: #eeeeee;
+  border: none;
+  margin-bottom: 15px;
+  width: 100%; }
+
+button {
+  background-color: transparent;
+  border: solid 1px #a30b1a;
+  color: #a30b1a; }
+
+.submit-wrapper {
+  text-align: right; }
