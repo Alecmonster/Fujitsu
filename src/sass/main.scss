@@ -4,6 +4,10 @@
 @import 'base';
 @import 'iframe';
 
+body {
+  font-family: 'FujitsuMed';
+}
+
 #wrapper {
   width: 100%;
   text-align: center;
@@ -26,7 +30,7 @@
 }
 
 #form-wrapper {
-  background-image: url('src/images/form-background.jpg');
+  background-image: url('img/form-background.jpg');
   min-height: 680px;
   background-repeat: no-repeat;
   background-size: contain;

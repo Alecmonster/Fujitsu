@@ -10,19 +10,19 @@
 <body>
 <form role="form" id="contactForm" data-toggle="validator" class="shake">
   <div class="form-group">
-    <input type="text" class="form-control" id="firstName" placeholder="First name:" required data-error="NEW ERROR MESSAGE">
+    <input type="text" class="form-control" id="firstName" placeholder="First name:" required data-error="Required">
     <div class="help-block with-errors"></div>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" id="lastName" placeholder="Last name:" required>
+    <input type="text" class="form-control" id="lastName" placeholder="Last name:" required data-error="Required">
     <div class="help-block with-errors"></div>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" id="company" placeholder="Company name:" required>
+    <input type="text" class="form-control" id="company" placeholder="Company name:" required data-error="Required">
     <div class="help-block with-errors"></div>
   </div>   
   <div class="form-group">
-    <input type="text" class="form-control" id="country" placeholder="Country:" required>
+    <input type="text" class="form-control" id="country" placeholder="Country:" required data-error="Required">
     <div class="help-block with-errors"></div>
   </div>       
   <div class="form-group">
@@ -30,11 +30,11 @@
     <div class="help-block with-errors"></div>
   </div>
   <div class="form-group">
-    <input type="tel" class="form-control" id="phone" placeholder="Phone:" required>
+    <input type="tel" class="form-control" id="phone" placeholder="Phone:" required data-error="Required">
     <div class="help-block with-errors"></div>
   </div>
   <div class="form-group">
-    <textarea id="message" class="form-control" rows="5" placeholder="Enquiry:" required></textarea>
+    <textarea id="message" class="form-control" rows="5" placeholder="Enquiry:" required data-error="Required"></textarea>
     <div class="help-block with-errors"></div>
   </div>
   <div class="submit-wrapper">

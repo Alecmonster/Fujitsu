@@ -2,11 +2,15 @@
 @import 'base';
 @import 'fonts';
 
+$textColor: #706f67;
+
 body {
   background-color: #dad9d6;
   margin: 0;
   padding: 15px;
-  @media(min-width: 640px) {
+  font-family: 'FujitsuReg';
+  color: $textColor;
+  @media(min-width: $bpxs) {
     padding: 30px;
   }
 }
@@ -16,14 +20,45 @@ input, textarea {
   border: none;
   margin-bottom: 15px;
   width: 100%;
+  font-family: 'FujitsuReg';
+  font-size: 14px;
+  padding: 6px 12px;
+  color: $textColor;
 }
 
 button {
+  font-family: 'FujitsuReg';
   background-color: transparent;
   border: solid 1px #a30b1a;
-  color: #a30b1a;
+  color: $red;
+  padding: 6px 18px;
 }
 
 .submit-wrapper {
   text-align: right;
+}
+.form-group {
+  position: relative;
+}
+
+.form-group.has-error {
+  input, textarea {
+    border: solid 1px $red;
+  }
+  .help-block {
+    color: $red;
+  }
+}
+.help-block {
+  font-size: 14px;
+  padding: 6px 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

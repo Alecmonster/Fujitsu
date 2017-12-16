@@ -411,9 +411,6 @@ template {
   font-family: 'FujitsuReg';
   src: url("src/fonts/fujitsusansregular-webfont.woff2") format("woff2"), url("src/fonts/fujitsusansregular-webfont.woff") format("woff"), url("src/fonts/fujitsusansregular-webfont") format("truetype"); }
 
-body {
-  font-family: 'FujitsuMed'; }
-
 html {
   box-sizing: border-box; }
 
@@ -425,6 +422,9 @@ iframe {
   border: none;
   max-width: 640px;
   height: 500px; }
+
+body {
+  font-family: 'FujitsuMed'; }
 
 #wrapper {
   width: 100%;
@@ -443,7 +443,7 @@ iframe {
   background-color: #efeee9; }
 
 #form-wrapper {
-  background-image: url("src/images/form-background.jpg");
+  background-image: url("img/form-background.jpg");
   min-height: 680px;
   background-repeat: no-repeat;
   background-size: contain;
