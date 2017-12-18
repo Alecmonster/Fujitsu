@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'FujitsuMed';
 
-  src: url('src/fonts/fujitsusansmedium-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('src/fonts/fujitsusansmedium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('src/fonts/fujitsusansmedium-webfont')  format('truetype'), /* Safari, Android, iOS */
+  src: url('font/fujitsusansmedium-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/fujitsusansmedium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('font/fujitsusansmedium-webfont')  format('truetype'), /* Safari, Android, iOS */
 }
 
 @font-face {
 font-family: 'FujitsuReg';
 
-  src: url('src/fonts/fujitsusansregular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
-       url('src/fonts/fujitsusansregular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
-       url('src/fonts/fujitsusansregular-webfont')  format('truetype'), /* Safari, Android, iOS */
+  src: url('font/fujitsusansregular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/fujitsusansregular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('font/fujitsusansregular-webfont')  format('truetype'), /* Safari, Android, iOS */
 }

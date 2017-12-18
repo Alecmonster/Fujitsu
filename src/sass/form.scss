@@ -17,7 +17,7 @@ body {
 
 input, textarea {
   background-color: #eeeeee;
-  border: none;
+  border: solid 1px #eeeeee; 
   margin-bottom: 15px;
   width: 100%;
   font-family: 'FujitsuReg';
@@ -35,8 +35,17 @@ button {
 }
 
 .submit-wrapper {
-  text-align: right;
+  // text-align: right;
+  display: flex;
 }
+#msgSubmit {
+  flex: 1;
+}
+
+#form-submit {
+  align-self: flex-start;  
+}
+
 .form-group {
   position: relative;
 }
@@ -61,4 +70,14 @@ button {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+
+
+.text-danger {
+  color: $red;
+}
+
+.text-success {
+  color: #005614;
 }

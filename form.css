@@ -6,11 +6,11 @@ html {
 
 @font-face {
   font-family: 'FujitsuMed';
-  src: url("src/fonts/fujitsusansmedium-webfont.woff2") format("woff2"), url("src/fonts/fujitsusansmedium-webfont.woff") format("woff"), url("src/fonts/fujitsusansmedium-webfont") format("truetype"); }
+  src: url("font/fujitsusansmedium-webfont.woff2") format("woff2"), url("font/fujitsusansmedium-webfont.woff") format("woff"), url("font/fujitsusansmedium-webfont") format("truetype"); }
 
 @font-face {
   font-family: 'FujitsuReg';
-  src: url("src/fonts/fujitsusansregular-webfont.woff2") format("woff2"), url("src/fonts/fujitsusansregular-webfont.woff") format("woff"), url("src/fonts/fujitsusansregular-webfont") format("truetype"); }
+  src: url("font/fujitsusansregular-webfont.woff2") format("woff2"), url("font/fujitsusansregular-webfont.woff") format("woff"), url("font/fujitsusansregular-webfont") format("truetype"); }
 
 body {
   background-color: #dad9d6;
@@ -24,7 +24,7 @@ body {
 
 input, textarea {
   background-color: #eeeeee;
-  border: none;
+  border: solid 1px #eeeeee;
   margin-bottom: 15px;
   width: 100%;
   font-family: 'FujitsuReg';
@@ -40,7 +40,15 @@ button {
   padding: 6px 18px; }
 
 .submit-wrapper {
-  text-align: right; }
+  display: -webkit-box;
+  display: flex; }
+
+#msgSubmit {
+  -webkit-box-flex: 1;
+          flex: 1; }
+
+#form-submit {
+  align-self: flex-start; }
 
 .form-group {
   position: relative; }
@@ -62,3 +70,9 @@ button {
   list-style: none;
   padding: 0;
   margin: 0; }
+
+.text-danger {
+  color: #a30b1a; }
+
+.text-success {
+  color: #005614; }
