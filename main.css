@@ -113,7 +113,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -566,7 +567,6 @@ html {
  *  Owl Carousel - Auto Height Plugin
  */
 .owl-height {
-  -webkit-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
 /*
@@ -574,7 +574,6 @@ html {
  */
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
-  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease; }
 
 .owl-carousel .owl-item img.owl-lazy {
@@ -602,7 +601,6 @@ html {
   z-index: 1;
   -webkit-backface-visibility: hidden;
   transition: -webkit-transform 100ms ease;
-  -webkit-transition: -webkit-transform 100ms ease;
   transition: transform 100ms ease;
   transition: transform 100ms ease, -webkit-transform 100ms ease; }
 
@@ -620,7 +618,6 @@ html {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
-  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease; }
 
 .owl-carousel .owl-video-frame {
@@ -679,7 +676,6 @@ html {
   background: #D6D6D6;
   display: block;
   -webkit-backface-visibility: visible;
-  -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
   border-radius: 30px; }
 
@@ -779,7 +775,6 @@ nav {
   padding: 0 10px; }
 
 #hero {
-  background: -webkit-linear-gradient(left, #d0d5d6 0%, #f0f3f4 100%);
   background: linear-gradient(90deg, #d0d5d6 0%, #f0f3f4 100%);
   /* w3c */
   display: block;
@@ -831,7 +826,8 @@ section .section-copy {
   padding: 20px;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  width: 100%; }
+  width: 100%;
+  position: absolute; }
 
 .grey-container > p {
   color: #fff;
