@@ -207,7 +207,7 @@
   .owl-theme .owl-nav [class*='owl-'] {
     color: #FFF;
     font-size: 14px;
-    margin: 5px;
+    margin: 0px;
     padding: 4px 7px;
     background: #D6D6D6;
     display: inline-block;
@@ -254,18 +254,21 @@
 .owl-prev, .owl-next {
   transform: translateY(-50%);
   position: absolute;
+  font-size: 0 !important;
 }
-$arrowWidth: 30px;
+$arrowWidth: 36px;
 .owl-prev {
   left: 0;
+  margin-left: 0;
   @media(min-width: 1280px + 2*$arrowWidth) {
-    left: -$arrowWidth;
+    left: -30 - $arrowWidth;
   }
 }
 
 .owl-next {
   right: 0;
+  margin-right: 0;
   @media(min-width: 1280px + 2*$arrowWidth) {
-    right: -$arrowWidth;
+    right: -30 - $arrowWidth;
   }
 }

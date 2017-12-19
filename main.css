@@ -641,7 +641,7 @@ html {
 .owl-theme .owl-nav [class*='owl-'] {
   color: #FFF;
   font-size: 14px;
-  margin: 5px;
+  margin: 0px;
   padding: 4px 7px;
   background: #D6D6D6;
   display: inline-block;
@@ -691,19 +691,22 @@ html {
 .owl-prev, .owl-next {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  position: absolute; }
+  position: absolute;
+  font-size: 0 !important; }
 
 .owl-prev {
-  left: 0; }
-  @media (min-width: 1340px) {
+  left: 0;
+  margin-left: 0; }
+  @media (min-width: 1352px) {
     .owl-prev {
-      left: -30px; } }
+      left: -66px; } }
 
 .owl-next {
-  right: 0; }
-  @media (min-width: 1340px) {
+  right: 0;
+  margin-right: 0; }
+  @media (min-width: 1352px) {
     .owl-next {
-      right: -30px; } }
+      right: -66px; } }
 
 iframe {
   width: 100%;
