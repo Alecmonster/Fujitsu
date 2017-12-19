@@ -18,6 +18,11 @@ var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 
+var imagemin = require('gulp-imagemin');
+var imageminMozjpeg = require('imagemin-mozjpeg');
+var imageminPngquant = require('imagemin-pngquant');
+var imageminSvgo = require('imagemin-svgo');
+
 var path = require('path');
 //wordpress
 // var dirName = path.dirname(__dirname).split(path.sep)[3];
@@ -55,11 +60,11 @@ gulp.task('styles', function(){
     .pipe(pixrem({ rootValue: '16px', html: false }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 });
 
 gulp.task('scripts', function(){
-  gulp.src('src/js/main/*.js')
+  gulp.src('src/js/**/*.js')
     .pipe(plumber(errorHandler))
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
@@ -69,20 +74,33 @@ gulp.task('scripts', function(){
     .pipe(uglify())
     .pipe(gulp.dest('./'))
     .pipe(browserSync.stream())
- gulp.src('src/js/form/*.js')
-    .pipe(plumber(errorHandler))
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(concat('form.js'))
-    .pipe(gulp.dest('./'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('./'))
-    .pipe(browserSync.stream())    
 }); 
+
+gulp.task('png', () =>
+ gulp.src('src/img/**/*.png')
+    .pipe(imagemin([imageminPngquant({
+    })]))
+    .pipe(gulp.dest('img'))
+);
+
+gulp.task('jpg', () =>
+  gulp.src('src/img/**/*.jpg')
+    .pipe(imagemin([imageminMozjpeg({
+      quality: 80
+    })]))
+    .pipe(gulp.dest('img'))
+);
+
+gulp.task('svg', () =>
+  gulp.src('src/img/**/*.svg')
+    .pipe(imagemin([imageminSvgo({
+    })]))
+    .pipe(gulp.dest('img'))
+);
 
 gulp.task('default', ['browser-sync'], function(){
   gulp.watch("src/sass/**/*.scss", ['styles']);
   gulp.watch("src/js/**/*.js", ['scripts']);
+  gulp.watch("src/img/**/*.*", ['png', 'jpg', 'svg']);
   gulp.watch(["*.html"],  ['bs-reload']);  
 });
