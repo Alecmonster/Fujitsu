@@ -876,7 +876,7 @@ section .section-copy {
 
 .grey-container {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
+  padding: 4% 20px;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   width: 100%;
@@ -887,7 +887,8 @@ section .section-copy {
 
 .grey-container > p {
   color: #fff;
-  line-height: 1.3; }
+  line-height: 1.3;
+  margin: 5px; }
 
 .grey-container.one-line-grey {
   height: 32%;
@@ -901,7 +902,7 @@ section .section-copy {
   text-align: center; }
 
 .form {
-  padding-top: 50px;
+  padding-top: 100px;
   margin-left: 6px; }
 
 #form-section-copy {
@@ -957,6 +958,13 @@ section .section-copy {
   #hero-copy .large-font {
     font-size: 26px; } }
 
+@media only screen and (max-width: 1050px) {
+  .grey-container {
+    padding: 2% 10px 5px;
+    font-size: 14px; }
+  .hover-content {
+    font-size: 12px; } }
+
 @media only screen and (max-width: 858px) {
   #people {
     width: 250px; }
@@ -975,7 +983,9 @@ section .section-copy {
   .two-col {
     display: block;
     width: 80%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  #form-wrapper > div {
+    padding: 50px; } }
 
 @media only screen and (max-width: 772px) {
   #speech {
@@ -988,12 +998,52 @@ section .section-copy {
   #people {
     width: 200px; }
   #hero {
-    text-align: center; } }
+    text-align: center; }
+  .two-col {
+    width: 90%; }
+  section {
+    padding-left: 16px;
+    padding-right: 16px; } }
 
 @media only screen and (max-width: 640px) {
   .section-copy {
     text-align: center;
-    margin: 0 auto 60px; } }
+    margin: 0 auto 60px; }
+  .grey-container {
+    padding: 4% 10px 5px;
+    font-size: 18px; }
+  .hover-content {
+    font-size: 14px;
+    margin-top: 5px; }
+  #form-section-copy {
+    width: 100%;
+    text-align: center;
+    margin: 20% auto; }
+  .form {
+    padding-top: 50px; }
+  header {
+    padding: 5px; }
+  .footer-col {
+    width: 100%;
+    display: block; }
+  #footer-menu {
+    text-align: center;
+    padding-left: 0; }
+  #footer {
+    padding: 5px; } }
+
+@media only screen and (max-width: 540px) {
+  #form-wrapper {
+    background-image: none;
+    padding: 20px; }
+  #form-wrapper > div {
+    padding: 20px 10px; }
+  .form {
+    padding-top: 30px; }
+  .two-col {
+    width: 100%; }
+  .section-copy {
+    padding: 0; } }
 
 @media only screen and (max-width: 364px) {
   #menu {
