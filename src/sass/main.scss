@@ -47,6 +47,7 @@ body {
 
 #logo {
   float: right;
+  margin-top: 5px;
 }
 
 header * {
@@ -69,6 +70,10 @@ nav {
 #nav-logos {
   float: right;
   padding-top: 5px;
+}
+
+#nav-logos > a {
+	padding: 5px;
 }
 
 #menu {
@@ -171,7 +176,7 @@ section .section-copy {
 }
 
 .slider:hover > .grey-container > .hover-content {
-	display: inline-block !important;
+	display: inline-block;
 }
 
 .grey-container {
@@ -180,12 +185,19 @@ section .section-copy {
 	transform: translateY(-100%);
 	width: 100%;
     position: absolute;
+    transition: height 0.15s;
+    height: 40%;
 }
 
 
 .grey-container > p{
 	color: #fff;
 	line-height: 1.3;
+}
+
+.grey-container.one-line-grey {
+	height: 32%;
+	transition: height 0.15s;
 }
 
 .two-col {
