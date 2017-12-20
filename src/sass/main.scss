@@ -16,7 +16,7 @@ body {
 
 }
 
-#content-wrapper {
+.content-wrapper {
   width: 100%;
   max-width: 1312px;
   margin: 0 auto;
@@ -77,9 +77,10 @@ nav {
   margin: 5px 0;
 }
 
-#menu > li {
+#menu > a > li {
   padding: 0 10px;
   font-family: 'FujitsuReg', Arial;
+  color: #231815;
 }
 
 #hero {
@@ -207,6 +208,47 @@ section .section-copy {
 
 }
 
+#footer {
+	background-color: #3c3c35;
+	display: block;
+}
+
+.footer-col {
+	text-align: left;
+	width: 50%;
+	display: inline-block;
+}
+
+#footer-menu {
+	list-style: none;
+	text-align: left;
+	margin: 0;
+}
+
+#footer-menu > a > li {
+	color: #fff;
+	display: inline-block;
+	text-decoration: none;
+	padding: 15px 5px;
+	font-size: 12px;
+}
+
+#footer-links {
+	float: right;
+}
+
+#footer-links > img {
+	display: inline-block;
+	width: 30px;
+	margin: 10px;
+}
+
+#copyright-container {
+	text-align: center;
+	color: #fff;
+	padding-bottom: 5px;
+	font-size: 12px;
+}
 
 @media only screen and (max-width: 1150px){
 	#people {
