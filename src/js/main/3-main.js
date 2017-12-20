@@ -9,6 +9,9 @@ $('.owl-carousel').owlCarousel({
       items:1,
     },
     640:{
+      items:2,
+    },
+    990:{
       items:3,
     }
   }
