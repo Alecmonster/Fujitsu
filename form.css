@@ -12,6 +12,13 @@ html {
   font-family: 'FujitsuReg';
   src: url("font/fujitsusansregular-webfont.woff2") format("woff2"), url("font/fujitsusansregular-webfont.woff") format("woff"), url("font/fujitsusansregular-webfont") format("truetype"); }
 
+@font-face {
+  font-family: 'FujitsuBold';
+  src: url("font/fujitsusansbold-webfont.woff2") format("woff2"), url("font/fujitsusansbold-webfont.woff") format("woff"), url("font/fujitsuSansBold") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal; }
+
 body {
   background-color: #dad9d6;
   margin: 0;

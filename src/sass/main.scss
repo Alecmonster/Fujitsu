@@ -79,6 +79,7 @@ nav {
 
 #menu > li {
   padding: 0 10px;
+  font-family: 'FujitsuReg', Arial;
 }
 
 #hero {
@@ -101,6 +102,10 @@ nav {
   margin-right: 3%;
   padding-top: 20px;
   padding-bottom: 3%;
+}
+
+#title {
+	font-family: 'FujitsuBold', Arial;
 }
 
 #hero-copy {
@@ -139,12 +144,41 @@ section .section-copy {
   padding: 0 16px;
 }
 
+@keyframes cover {
+	from {
+		background-color: rgba(0, 0, 0, 0.7);
+		height: 40%;
+	}
+
+	to {
+		background-color: rgba(175,39,46,0.7);
+		height: 100%;
+	}
+}
+
+.hover-content {
+	display: none;
+	font-size: 14px;
+}
+
+.slider:hover > .grey-container {
+	width: 100%;
+	animation-name: cover;
+	animation-duration: 0.5s;
+	height: 100%;
+	background-color: rgba(175,39,46,0.7);	
+}
+
+.slider:hover > .grey-container > .hover-content {
+	display: inline-block !important;
+}
+
 .grey-container {
 	background-color: rgba(0, 0, 0, 0.7);
 	padding: 20px;
 	transform: translateY(-100%);
 	width: 100%;
-  position: absolute;
+    position: absolute;
 }
 
 
@@ -171,4 +205,54 @@ section .section-copy {
   color: #ffffff;
   width: 60%;
 
+}
+
+
+@media only screen and (max-width: 1150px){
+	#people {
+		width: 300px;
+	}
+
+	#hero-copy {
+		margin-top: 10px;
+		width: 30%;
+	}
+
+	#speech {
+		padding-bottom: 0;
+		margin-left: 5%;
+	}
+
+	#hero-copy .large-font {
+		font-size: 26px;
+	}
+}
+
+@media only screen and (max-width: 858px){
+	#people {
+		width: 250px;
+	}
+
+	#hero-copy {
+		margin-top: 5px;
+		width: 40%;
+	}
+
+	#speech {
+		margin-left: 3%;
+		width: 150px;
+
+	}
+
+	#hero-copy .large-font {
+		font-size: 24px;
+	}
+
+	.section-copy p {
+  		font-size: 16px;
+	}
+
+	section .section-copy h2 {
+  		font-size: 22px;
+	}
 }

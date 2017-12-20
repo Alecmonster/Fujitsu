@@ -113,8 +113,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -411,6 +410,13 @@ template {
   font-family: 'FujitsuReg';
   src: url("font/fujitsusansregular-webfont.woff2") format("woff2"), url("font/fujitsusansregular-webfont.woff") format("woff"), url("font/fujitsusansregular-webfont") format("truetype"); }
 
+@font-face {
+  font-family: 'FujitsuBold';
+  src: url("font/fujitsusansbold-webfont.woff2") format("woff2"), url("font/fujitsusansbold-webfont.woff") format("woff"), url("font/fujitsuSansBold") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   box-sizing: border-box; }
 
@@ -567,6 +573,7 @@ html {
  *  Owl Carousel - Auto Height Plugin
  */
 .owl-height {
+  -webkit-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
 /*
@@ -574,6 +581,7 @@ html {
  */
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
+  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease; }
 
 .owl-carousel .owl-item img.owl-lazy {
@@ -601,6 +609,7 @@ html {
   z-index: 1;
   -webkit-backface-visibility: hidden;
   transition: -webkit-transform 100ms ease;
+  -webkit-transition: -webkit-transform 100ms ease;
   transition: transform 100ms ease;
   transition: transform 100ms ease, -webkit-transform 100ms ease; }
 
@@ -618,6 +627,7 @@ html {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease; }
 
 .owl-carousel .owl-video-frame {
@@ -676,6 +686,7 @@ html {
   background: #D6D6D6;
   display: block;
   -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
   border-radius: 30px; }
 
@@ -772,9 +783,11 @@ nav {
   margin: 5px 0; }
 
 #menu > li {
-  padding: 0 10px; }
+  padding: 0 10px;
+  font-family: 'FujitsuReg', Arial; }
 
 #hero {
+  background: -webkit-linear-gradient(left, #d0d5d6 0%, #f0f3f4 100%);
   background: linear-gradient(90deg, #d0d5d6 0%, #f0f3f4 100%);
   /* w3c */
   display: block;
@@ -791,6 +804,9 @@ nav {
   margin-right: 3%;
   padding-top: 20px;
   padding-bottom: 3%; }
+
+#title {
+  font-family: 'FujitsuBold', Arial; }
 
 #hero-copy {
   width: 30%;
@@ -821,6 +837,38 @@ section .section-copy {
   font-size: 17px;
   padding: 0 16px; }
 
+@-webkit-keyframes cover {
+  from {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 40%; }
+  to {
+    background-color: rgba(175, 39, 46, 0.7);
+    height: 100%; } }
+
+@keyframes cover {
+  from {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 40%; }
+  to {
+    background-color: rgba(175, 39, 46, 0.7);
+    height: 100%; } }
+
+.hover-content {
+  display: none;
+  font-size: 14px; }
+
+.slider:hover > .grey-container {
+  width: 100%;
+  -webkit-animation-name: cover;
+          animation-name: cover;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  height: 100%;
+  background-color: rgba(175, 39, 46, 0.7); }
+
+.slider:hover > .grey-container > .hover-content {
+  display: inline-block !important; }
+
 .grey-container {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
@@ -848,3 +896,31 @@ section .section-copy {
   margin: 45% auto;
   color: #ffffff;
   width: 60%; }
+
+@media only screen and (max-width: 1150px) {
+  #people {
+    width: 300px; }
+  #hero-copy {
+    margin-top: 10px;
+    width: 30%; }
+  #speech {
+    padding-bottom: 0;
+    margin-left: 5%; }
+  #hero-copy .large-font {
+    font-size: 26px; } }
+
+@media only screen and (max-width: 858px) {
+  #people {
+    width: 250px; }
+  #hero-copy {
+    margin-top: 5px;
+    width: 40%; }
+  #speech {
+    margin-left: 3%;
+    width: 150px; }
+  #hero-copy .large-font {
+    font-size: 24px; }
+  .section-copy p {
+    font-size: 16px; }
+  section .section-copy h2 {
+    font-size: 22px; } }

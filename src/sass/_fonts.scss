@@ -13,3 +13,13 @@ font-family: 'FujitsuReg';
        url('font/fujitsusansregular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
        url('font/fujitsusansregular-webfont')  format('truetype'), /* Safari, Android, iOS */
 }
+
+@font-face {
+    font-family: 'FujitsuBold';
+    src: url('font/fujitsusansbold-webfont.woff2') format('woff2'),
+         url('font/fujitsusansbold-webfont.woff') format('woff'),
+         url('font/fujitsuSansBold') format('truetype'); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+
+}
