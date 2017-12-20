@@ -35,7 +35,7 @@ body {
   background-image: url('img/form-background.jpg');
   min-height: 680px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: inherit;
   background-color: #681a14;
 }
 
@@ -132,7 +132,7 @@ nav {
 }
 
 section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .section-copy {
@@ -262,6 +262,8 @@ section .section-copy {
 	font-size: 12px;
 }
 
+
+
 @media only screen and (max-width: 1150px){
 	#people {
 		width: 300px;
@@ -308,5 +310,51 @@ section .section-copy {
 
 	section .section-copy h2 {
   		font-size: 22px;
+	}
+
+	.two-col {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 772px){
+	#speech {
+		margin-left: 1%;
+		width: 130px;
+	}
+
+	#hero-copy {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	#people {
+		width: 200px;
+	}
+
+	#hero {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 640px){
+	.section-copy {
+		text-align: center;
+		margin: 0 auto 60px;
+
+	}
+}
+
+@media only screen and (max-width: 364px){
+	#menu {
+		font-size: 14px;
+		padding-left: 0;
+	}
+
+	#menu > a > li {
+		padding: 0 5px;
 	}
 }
