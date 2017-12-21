@@ -931,8 +931,9 @@ section .section-copy {
 #footer-links a {
   margin: 15px 12.5px;
   display: inline-block; }
-  #footer-links a:last-of-type {
-    margin-right: 0; }
+  @media (min-width: 1312px) {
+    #footer-links a:last-of-type {
+      margin-right: 0; } }
 
 #footer-links img {
   display: inline-block;
