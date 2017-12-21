@@ -113,8 +113,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -574,6 +573,7 @@ html {
  *  Owl Carousel - Auto Height Plugin
  */
 .owl-height {
+  -webkit-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out; }
 
 /*
@@ -581,6 +581,7 @@ html {
  */
 .owl-carousel .owl-item .owl-lazy {
   opacity: 0;
+  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease; }
 
 .owl-carousel .owl-item img.owl-lazy {
@@ -608,6 +609,7 @@ html {
   z-index: 1;
   -webkit-backface-visibility: hidden;
   transition: -webkit-transform 100ms ease;
+  -webkit-transition: -webkit-transform 100ms ease;
   transition: transform 100ms ease;
   transition: transform 100ms ease, -webkit-transform 100ms ease; }
 
@@ -625,6 +627,7 @@ html {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease; }
 
 .owl-carousel .owl-video-frame {
@@ -683,6 +686,7 @@ html {
   background: #D6D6D6;
   display: block;
   -webkit-backface-visibility: visible;
+  -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
   border-radius: 30px; }
 
@@ -757,6 +761,9 @@ body {
   float: right;
   margin-top: 5px; }
 
+header {
+  padding: 5px; }
+
 header * {
   display: inline-block; }
 
@@ -788,6 +795,7 @@ nav {
   color: #231815; }
 
 #hero {
+  background: -webkit-linear-gradient(left, #d0d5d6 0%, #f0f3f4 100%);
   background: linear-gradient(90deg, #d0d5d6 0%, #f0f3f4 100%);
   /* w3c */
   display: block;
@@ -876,6 +884,7 @@ section .section-copy {
           transform: translateY(-100%);
   width: 100%;
   position: absolute;
+  -webkit-transition: height 0.15s;
   transition: height 0.15s;
   height: 40%; }
 
@@ -886,17 +895,18 @@ section .section-copy {
 
 .grey-container.one-line-grey {
   height: 32%;
+  -webkit-transition: height 0.15s;
   transition: height 0.15s; }
 
 .two-col {
-  width: 45%;
+  width: 49.8%;
   display: inline-block;
   vertical-align: top;
   text-align: center; }
 
 .form {
   padding-top: 100px;
-  margin-left: 6px; }
+  text-align: right; }
 
 #form-section-copy {
   text-align: left;
@@ -926,7 +936,9 @@ section .section-copy {
   font-size: 12px; }
 
 #footer-links {
-  float: right; }
+  text-align: right;
+  display: inline-block;
+  width: 49.7%; }
 
 #footer-links a {
   margin: 15px 12.5px;
@@ -943,6 +955,25 @@ section .section-copy {
   color: #fff;
   padding-bottom: 5px;
   font-size: 12px; }
+
+@media only screen and (min-width: 1312px) {
+  section .section-copy {
+    padding: 0; }
+  header {
+    padding: 0; } }
+
+@media only screen and (max-width: 1280px) {
+  .footer-col {
+    text-align: center;
+    width: 100%;
+    display: block; }
+  #footer-menu {
+    text-align: center;
+    padding-left: 0; }
+  #footer-links {
+    text-align: center;
+    display: block;
+    width: 100%; } }
 
 @media only screen and (max-width: 1150px) {
   #people {
@@ -961,7 +992,16 @@ section .section-copy {
     padding: 2% 10px 5px;
     font-size: 14px; }
   .hover-content {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .two-col {
+    display: block;
+    width: 80%;
+    margin: 0 auto; }
+  .form {
+    text-align: center;
+    padding-top: 30px; }
+  #form-wrapper > div {
+    padding: 50px; } }
 
 @media only screen and (max-width: 858px) {
   #people {
@@ -977,13 +1017,7 @@ section .section-copy {
   .section-copy p {
     font-size: 16px; }
   section .section-copy h2 {
-    font-size: 22px; }
-  .two-col {
-    display: block;
-    width: 80%;
-    margin: 0 auto; }
-  #form-wrapper > div {
-    padding: 50px; } }
+    font-size: 22px; } }
 
 @media only screen and (max-width: 772px) {
   #speech {
@@ -1019,8 +1053,6 @@ section .section-copy {
     margin: 20% auto; }
   .form {
     padding-top: 50px; }
-  header {
-    padding: 5px; }
   .footer-col {
     width: 100%;
     display: block; }
