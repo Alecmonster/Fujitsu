@@ -250,10 +250,20 @@ section .section-copy {
 	float: right;
 }
 
-#footer-links > img {
-	display: inline-block;
-	width: 30px;
-	margin: 10px;
+#footer-links {
+  a {
+    margin: 15px 12.5px;
+  	display: inline-block;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  
+  img {
+    display: inline-block;
+  	width: 30px;
+  }
+
 }
 
 #copyright-container {
