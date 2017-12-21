@@ -50,6 +50,11 @@ body {
   margin-top: 5px;
 }
 
+
+header {
+  padding: 5px;
+}
+
 header * {
   display: inline-block;
 }
@@ -202,7 +207,7 @@ section .section-copy {
 }
 
 .two-col {
-  width: 45%;
+  width: 49.8%;
   display: inline-block;
   vertical-align: top;
   text-align: center;
@@ -210,7 +215,8 @@ section .section-copy {
 
 .form {
   padding-top: 100px;
-  margin-left: 6px;
+  text-align: right;
+
 }
 
 #form-section-copy {
@@ -247,7 +253,9 @@ section .section-copy {
 }
 
 #footer-links {
-	float: right;
+	text-align: right;
+	display: inline-block;
+	width: 49.7%;
 }
 
 #footer-links {
@@ -275,6 +283,34 @@ section .section-copy {
 	font-size: 12px;
 }
 
+@media only screen and (min-width: 1312px){
+	section .section-copy {
+  		padding: 0;
+	}
+
+	header {
+		padding: 0;
+	}
+}
+
+@media only screen and (max-width: 1280px){
+	.footer-col {
+		text-align: center;
+		width: 100%;
+		display: block;
+	}
+
+	#footer-menu {
+		text-align: center;
+		padding-left: 0;
+	}
+
+	#footer-links {
+		text-align: center;
+		display: block;
+		width: 100%;
+	}
+}
 
 
 @media only screen and (max-width: 1150px){
@@ -295,6 +331,7 @@ section .section-copy {
 	#hero-copy .large-font {
 		font-size: 26px;
 	}
+
 }
 
 
@@ -306,6 +343,21 @@ section .section-copy {
 
 	.hover-content {
 		font-size: 12px;
+	}
+
+	.two-col {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.form {
+		text-align: center;
+		padding-top: 30px;
+	}
+
+	#form-wrapper > div {
+		padding: 50px;
 	}
 }
 
@@ -337,15 +389,7 @@ section .section-copy {
   		font-size: 22px;
 	}
 
-	.two-col {
-		display: block;
-		width: 80%;
-		margin: 0 auto;
-	}
-
-	#form-wrapper > div {
-		padding: 50px;
-	}
+	
 }
 
 @media only screen and (max-width: 772px){
@@ -404,10 +448,6 @@ section .section-copy {
 
 	.form {
 		padding-top: 50px;
-	}
-
-	header {
-		padding: 5px;
 	}
 
 	.footer-col {
