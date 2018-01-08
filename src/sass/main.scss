@@ -81,6 +81,33 @@ nav {
 	padding: 5px;
 }
 
+#share {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.social-list {
+	padding-left: 0;
+}
+
 #menu {
   list-style: none;
   padding-left: 25px;
@@ -485,17 +512,18 @@ section .section-copy {
 
 	.section-copy {
 		padding: 0;
-
 	}
-}
 
-@media only screen and (max-width: 364px){
+	.mob-hide {
+		display: none;
+	}
+
 	#menu {
 		font-size: 14px;
 		padding-left: 0;
 	}
 
 	#menu > a > li {
-		padding: 0 5px;
+		padding: 0 3px;
 	}
 }
