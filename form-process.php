@@ -55,7 +55,7 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "jonah.freeland@gmail.com";
+$EmailTo = "askfujitsu@uk.fujitsu.com";
 $Subject = "New Enquiry Received";
 
 // prepare email body text

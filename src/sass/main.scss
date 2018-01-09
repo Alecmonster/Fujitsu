@@ -290,7 +290,9 @@ section .section-copy {
     margin: 15px 12.5px;
   	display: inline-block;
     &:last-of-type {
-      margin-right: 0;
+      @media(min-width: 1312px) {
+        margin-right: 0;
+      }
     }
   }
   
