@@ -89,6 +89,7 @@ nav {
 .dropdown {
 	position: relative;
 	display: inline-block;
+  pointer-events: none;
 }
 
 .dropdown-content {
@@ -100,7 +101,7 @@ nav {
     text-align: center;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
     display: block;
 }
 

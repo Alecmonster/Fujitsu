@@ -786,7 +786,8 @@ nav {
 
 .dropdown {
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  pointer-events: none; }
 
 .dropdown-content {
   display: none;
@@ -796,7 +797,7 @@ nav {
   z-index: 1;
   text-align: center; }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
   display: block; }
 
 .social-list {
