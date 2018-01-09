@@ -16,3 +16,7 @@ $('.owl-carousel').owlCarousel({
     }
   }
 });
+
+$('.dropdown').on('click', function(event) {
+  $('.dropdown-content').toggle();
+});

@@ -89,7 +89,7 @@ nav {
 .dropdown {
 	position: relative;
 	display: inline-block;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .dropdown-content {
@@ -99,10 +99,6 @@ nav {
     width: 100%;
     z-index: 1;
     text-align: center;
-}
-
-.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
-    display: block;
 }
 
 .social-list {
