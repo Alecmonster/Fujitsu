@@ -47,12 +47,12 @@ body {
 
 #logo {
   float: right;
-  margin-top: 5px;
+  width: 78px;
 }
 
 
 header {
-  padding: 5px;
+  padding: 10px 50px 0 20px;
 }
 
 header * {
@@ -311,10 +311,6 @@ section .section-copy {
 	section .section-copy {
   		padding: 0;
 	}
-
-	header {
-		padding: 0;
-	}
 }
 
 @media only screen and (max-width: 1280px){
@@ -452,6 +448,10 @@ section .section-copy {
 	.section-copy {
 		text-align: center;
 		margin: 0 auto 60px;
+	}
+
+	header {
+  		padding: 10px 10px 0 10px;
 	}
 
 	.grey-container {
