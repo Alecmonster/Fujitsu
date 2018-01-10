@@ -19,7 +19,7 @@ body {
 .content-wrapper {
   width: 100%;
   max-width: 1312px;
-  margin: 0 auto;
+  margin: 100px auto 0;
   text-align: left;
 }
 
@@ -53,14 +53,30 @@ body {
 
 header {
   padding: 10px 50px 0 20px;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  .container {
+    max-width: 1312px;
+    margin: 0 auto;
+
+  }
 }
 
-header * {
-  display: inline-block;
+header .container * {
 }
 
 .title-section {
+  display: inline-block;
   width: 100%;
+  * {
+    display: inline-block;
+  }
 }
 
 #title {
@@ -69,6 +85,10 @@ header * {
 }
 
 nav {
+  display: inline-block;
+  * {
+    display: inline-block;
+  }
   width: 100%;
 }
 

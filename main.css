@@ -732,7 +732,7 @@ body {
 .content-wrapper {
   width: 100%;
   max-width: 1312px;
-  margin: 0 auto;
+  margin: 100px auto 0;
   text-align: left; }
 
 #grey-wrapper {
@@ -758,20 +758,34 @@ body {
   width: 78px; }
 
 header {
-  padding: 10px 50px 0 20px; }
-
-header * {
-  display: inline-block; }
+  padding: 10px 50px 0 20px;
+  text-align: left;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10; }
+  header .container {
+    max-width: 1312px;
+    margin: 0 auto; }
 
 .title-section {
+  display: inline-block;
   width: 100%; }
+  .title-section * {
+    display: inline-block; }
 
 #title {
   margin: 10px 0;
   font-size: 20px; }
 
 nav {
+  display: inline-block;
   width: 100%; }
+  nav * {
+    display: inline-block; }
 
 #nav-logos {
   float: right;
