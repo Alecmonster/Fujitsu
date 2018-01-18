@@ -477,10 +477,6 @@ html {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none; }
 
-.owl-carousel .owl-item img {
-  display: block;
-  width: 100%; }
-
 .owl-carousel .owl-nav.disabled,
 .owl-carousel .owl-dots.disabled {
   display: none; }
@@ -832,7 +828,7 @@ nav {
   padding-bottom: 0;
   padding-top: 0; }
 
-#hero > * {
+#hero .owl-item > div > * {
   display: inline-block;
   vertical-align: top; }
 
@@ -893,6 +889,10 @@ section .section-copy {
 .hover-content {
   display: none;
   font-size: 14px; }
+
+.content-slider img {
+  display: block;
+  width: 100%; }
 
 .slider:hover > .grey-container {
   width: 100%;

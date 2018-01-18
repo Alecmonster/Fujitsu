@@ -147,9 +147,11 @@ nav {
   
 }
 
-#hero > * {
-  display: inline-block;
-  vertical-align: top;
+#hero .owl-item > div {
+  > * {
+    display: inline-block;
+    vertical-align: top;
+  }
 }
 
 #speech {
@@ -214,6 +216,11 @@ section .section-copy {
 .hover-content {
 	display: none;
 	font-size: 14px;
+}
+
+.content-slider img {
+  display: block;
+  width: 100%;
 }
 
 .slider:hover > .grey-container {

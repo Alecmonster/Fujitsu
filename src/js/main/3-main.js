@@ -1,4 +1,4 @@
-$('.owl-carousel').owlCarousel({
+$('.content-slider').owlCarousel({
   nav: true,
   navText: ['<img src="img/arrow-left.png">','<img src="img/arrow-right.png">'],
   dots: false,
@@ -15,6 +15,14 @@ $('.owl-carousel').owlCarousel({
       items:3,
     }
   }
+});
+
+$('.hero-slider').owlCarousel({
+  nav: false,
+  dots: true,
+  margin: 30,
+  // responsiveClass:true,
+  items: 1
 });
 
 $('.dropdown').on('click', function(event) {
