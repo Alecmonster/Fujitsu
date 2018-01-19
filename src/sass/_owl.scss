@@ -223,7 +223,12 @@
 
 .owl-theme .owl-dots {
   text-align: center;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+}
   .owl-theme .owl-dots .owl-dot {
     display: inline-block;
     zoom: 1;
@@ -232,13 +237,14 @@
       width: 10px;
       height: 10px;
       margin: 5px 7px;
-      background: #D6D6D6;
+      background: transparent;
+      border: solid white 1px;
       display: block;
       -webkit-backface-visibility: visible;
       transition: opacity 200ms ease;
       border-radius: 30px; }
     .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-      background: #869791; }
+      background: white; }
 
 
 .owl-nav {
@@ -267,5 +273,32 @@ $arrowWidth: 36px;
   margin-right: 0;
   @media(min-width: 1280px + 2*$arrowWidth) {
     right: -30 - $arrowWidth;
+  }
+}
+
+
+
+/* Equal Heights for OwlCarousel 2 */
+
+.owl-carousel {
+  .owl-stage {
+    display: flex;
+  }
+  .owl-item {
+    display: flex;
+    flex: 1 0 auto;
+  }
+  .caption {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+  }
+  .flex-text {
+    flex-grow: 1
+  }
+  .thumbnail {
+    display: flex;
+    flex-direction: column;
+    // margin: 0 15px;
   }
 }

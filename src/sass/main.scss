@@ -138,27 +138,34 @@ nav {
 }
 
 #hero {
-  
-  background: linear-gradient(90deg, rgba(208,213,214,1) 0%, rgba(240,243,244,1) 100%); /* w3c */
+  background: linear-gradient(90deg, rgba(208,213,214,1) 0%, rgba(240,243,244,1) 100%);
+  // background: linear-gradient(90deg, #cfd1ce 0%, #c8cac7 100%);
   display: block;
   width: 100%;
   padding-bottom: 0;
   padding-top: 0;
+  padding: 0;
   
 }
 
 #hero .owl-item > div {
+  width: 100%;
+  padding-bottom: 40px;
+  @media(min-width: $bpl) {
+    padding-bottom: 80px;
+  }
   > * {
     display: inline-block;
     vertical-align: top;
   }
 }
 
-#speech {
+.speech {
   margin-left: 12%;
   margin-right: 3%;
   padding-top: 20px;
   padding-bottom: 3%;
+  width: 213px;
 }
 
 #title {
@@ -180,6 +187,49 @@ nav {
 #people {
 	width: 400px;
 	height: auto;
+}
+
+#hero-slide-1 {
+  background-image: linear-gradient(90deg, rgba(208,213,214,0.7) 0%, rgba(240,243,244,0.7) 100%), url(img/hero.jpg);
+  @media(min-width: $bpl) {
+   background-image: url(img/hero.jpg);    
+  }
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+#hero-slide-2 {
+  background-image: linear-gradient(90deg, rgba(208,213,214,0.7) 0%, rgba(240,243,244,0.7) 100%), url(img/slide-2.jpg);
+  @media(min-width: $bpl) {
+   background-image: url(img/slide-2.jpg);    
+  }
+  // background-size: cover;
+  // background-position: bottom;
+  // @media(min-width: $bpm) {
+    background-size: cover;
+    background-position: right;
+  // }
+  background-repeat: no-repeat;
+  // min-height: 602px;
+  // @media(min-width: $bpm) {
+    // min-height: 409px;
+  // }
+  // @media(min-width: $
+    // min-height: 542px;
+
+}
+
+#assessment-button {
+  width: 180px;
+  display: block;
+  // margin-top: 0px;
+  @media(max-width: $bpm) {
+    margin: 40px auto 0;
+  }
+  img {
+    width: 100%;
+  }
 }
 
 section {
@@ -370,7 +420,7 @@ section .section-copy {
 		width: 30%;
 	}
 
-	#speech {
+	.speech {
 		padding-bottom: 0;
 		margin-left: 5%;
 	}
@@ -418,7 +468,7 @@ section .section-copy {
 		width: 40%;
 	}
 
-	#speech {
+	.speech {
 		margin-left: 3%;
 		width: 150px;
 
@@ -440,7 +490,7 @@ section .section-copy {
 }
 
 @media only screen and (max-width: 772px){
-	#speech {
+	.speech {
 		margin-left: 1%;
 		width: 130px;
 	}

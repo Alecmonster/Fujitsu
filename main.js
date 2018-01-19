@@ -103,7 +103,7 @@ $('.content-slider').owlCarousel({
 $('.hero-slider').owlCarousel({
   nav: false,
   dots: true,
-  margin: 30,
+  margin: 0,
   // responsiveClass:true,
   items: 1
 });
