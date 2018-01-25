@@ -960,6 +960,9 @@ section .section-copy {
   display: none;
   font-size: 14px; }
 
+.content-slider a {
+  position: relative; }
+
 .content-slider img {
   display: block;
   width: 100%; }
