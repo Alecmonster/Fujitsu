@@ -1,0 +1,24 @@
+<script src="//app-lon06.marketo.com/js/forms2/js/forms2.min.js"></script>
+<form id="mktoForm_1470"></form>
+<div class="after-submit-content" style="display: none;">
+	<!-- This element contains content that will show after a successful form submit -->
+	<h2>Message Submitted</h2>
+</div>
+<script>
+	MktoForms2.loadForm("//app-lon06.marketo.com", "807-GYW-324", 1470, function(form) {
+		// jQuery reference to form element
+		var $form = form.getFormElem();
+		// Upon submit hide the form and show sibling elements with the class 'after-submit-content'
+		// Return false to prevent default post-form redirect
+		function onFormSubmitSuccess(values, followUpUrl) {
+			$form.hide();
+			var $afterSubmitContent = $form.siblings('.after-submit-content');
+			$afterSubmitContent.show();
+			$form.parents('html,body').animate({
+		       scrollTop: $afterSubmitContent.first().offset().top - 100
+		   	});
+			return false;
+		}						
+		form.onSuccess(onFormSubmitSuccess);
+	});
+</script>

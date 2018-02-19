@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+@font-face {
+  font-family: 'FujitsuMed';
+  src: url("font/fujitsusansmedium-webfont.woff2") format("woff2"), url("font/fujitsusansmedium-webfont.woff") format("woff"), url("font/fujitsusansmedium-webfont") format("truetype"); }
+
+@font-face {
+  font-family: 'FujitsuReg';
+  src: url("font/fujitsusansregular-webfont.woff2") format("woff2"), url("font/fujitsusansregular-webfont.woff") format("woff"), url("font/fujitsusansregular-webfont") format("truetype"); }
+
+@font-face {
+  font-family: 'FujitsuBold';
+  src: url("font/fujitsusansbold-webfont.woff2") format("woff2"), url("font/fujitsusansbold-webfont.woff") format("woff"), url("font/fujitsuSansBold") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  background-color: #dad9d6;
+  margin: 0;
+  padding: 15px;
+  font-family: 'FujitsuReg';
+  color: #706f67; }
+  @media (min-width: 480px) {
+    body {
+      padding: 30px; } }
+
+input, textarea {
+  background-color: #eeeeee;
+  border: solid 1px #eeeeee;
+  margin-bottom: 15px;
+  width: 100%;
+  font-family: 'FujitsuReg';
+  font-size: 14px;
+  padding: 6px 12px;
+  color: #706f67; }
+
+button {
+  font-family: 'FujitsuReg';
+  background-color: transparent;
+  border: solid 1px #a30b1a;
+  color: #a30b1a;
+  padding: 6px 18px; }
+
+.submit-wrapper {
+  display: -webkit-box;
+  display: flex; }
+
+#msgSubmit {
+  -webkit-box-flex: 1;
+          flex: 1; }
+
+#form-submit {
+  align-self: flex-start; }
+
+.form-group {
+  position: relative; }
+
+.form-group.has-error input, .form-group.has-error textarea {
+  border: solid 1px #a30b1a; }
+
+.form-group.has-error .help-block {
+  color: #a30b1a; }
+
+.help-block {
+  font-size: 14px;
+  padding: 6px 12px;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.text-danger {
+  color: #a30b1a; }
+
+.text-success {
+  color: #005614; }

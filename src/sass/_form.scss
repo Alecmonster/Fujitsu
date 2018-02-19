@@ -1,0 +1,108 @@
+@import 'vars';
+@import 'base';
+@import 'fonts';
+
+$textColor: #706f67;
+
+form {
+  background-color: #dad9d6;
+  width: 100% !important;
+  margin: 0;
+  padding: 15px;
+  font-family: 'FujitsuReg';
+  color: $textColor;
+  @media(min-width: $bpxs) {
+    padding: 20px 30px;
+  }
+}
+
+.mktoFormCol, .mktoFieldWrap {
+  width: 100% !important;
+}
+
+label, .mktoOffset {
+  display: none;
+}
+
+.mktoGutter {
+  height: 0.8em !important;
+}
+
+.mktoButtonWrap {
+  margin-left: 0 !important;
+}
+
+.mktoButtonRow {
+  margin-top: 12px;
+}
+
+input, textarea, select {
+  background-color: #eeeeee;
+  border: solid 1px #eeeeee; 
+  margin-bottom: 15px;
+  width: 100% !important;
+  font-family: 'FujitsuReg';
+  font-size: 14px;
+  padding: 6px 12px !important;
+  color: $textColor;
+}
+
+button {
+  font-family: 'FujitsuReg';
+  background-color: transparent;
+  border: solid 1px #a30b1a;
+  color: $red;
+  padding: 6px 18px;
+}
+
+.submit-wrapper {
+  // text-align: right;
+  display: flex;
+}
+#msgSubmit {
+  flex: 1;
+}
+
+#form-submit {
+  align-self: flex-start;  
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group.has-error {
+  input, textarea {
+    border: solid 1px $red;
+  }
+  .help-block {
+    color: $red;
+  }
+}
+.help-block {
+  font-size: 14px;
+  padding: 6px 12px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.text-danger {
+  color: $red;
+}
+
+.text-success {
+  color: #005614;
+}
+
+.after-submit-content {
+  color: white;
+}
